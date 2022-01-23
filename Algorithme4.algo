@@ -1,0 +1,25 @@
+
+    FUNCTION Insertion_sort(arr):ARRAY_OF INTEGER;
+    VAR 
+    i,j:= INTEGER
+    BEGIN
+    FOR i FROM 1 TO arr.length DO
+    k= arr[i]
+    j = i-1
+    WHILE (j >= 0 and k < arr[j]) DO
+    arr[j + 1] = arr[j]
+    j -= 1
+    arr[j + 1] = k
+    END_WHILE  
+    RETURN k;
+    END_FOR
+    END
+
+ALGORITHM SortArr
+VAR
+arr :={22, 11, 99, 88, 9, 7, 42};
+BEGIN
+    Insertion_sort(arr);
+    Write("Array after sorting:  " arr);
+END
+
